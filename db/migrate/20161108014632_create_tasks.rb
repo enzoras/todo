@@ -5,7 +5,11 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.text :notes
       t.string :user
       t.integer :category
-
+      t.integer :sort_order
+      t.string :priority
+      t.datetime :due_date
+      t.file_field :attachment
+      
       t.timestamps
     end
   end
