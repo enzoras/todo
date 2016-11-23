@@ -1,6 +1,8 @@
 <h1>Editing Task</h1>
 
+<%= link_to 'X', tasks_path, class: 'col-md-offset-8 btn btn-primary', style: 'color:white' %>
+
 <%= render 'form', task: @task %>
 
 <%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+

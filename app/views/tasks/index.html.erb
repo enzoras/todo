@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <% checkmark = "\u2713" %>
   <h1>Tasks</h1>
   <a href = <%= new_task_path %> role="button" class="btn btn-default btn-lg col-md-offset-1">+</a>
 
@@ -13,7 +14,7 @@
       <thead>
         <tr>
           <th class='col-md-3 col-md-offset-2'>Title</th>
-          <th class='col-md-3'>Notes</th>
+          <!--<th class='col-md-3'>Notes</th>-->
           <th class='col-md-1>User</th>
           <th class='col-md-2>Category</th>
         </tr>
@@ -22,16 +23,17 @@
       <tbody>
         <% @tasks.each do |task| %>
           <tr>
-            <td><a class="task-link"><%= link_to task.title, edit_task_path(task) %></a>
-              <a><%= button_to "DONE!", task, method: :delete, data: { confirm: 'Are you sure?' }, form_class:"btn btn-success glyphicon glyphicon-ok" %></a>
+            <td>
+              <a class="task-link"><%= link_to task.title, edit_task_path(task) %></a>
+              <%= button_to checkmark, task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></button>
             </td>
-            <td><%= task.notes %></td>
+            <!--<td><%= task.notes %></td>-->
             <td><%= task.user %></td>
             <td><%= task.category %></td>
             <td>
-              <button type="button" class="btn btn-success"><%= link_to 'Show', task %></button>
-              <button type="button" class="btn btn-info"><%= link_to 'Edit', edit_task_path(task) %></button>
-              <button type="button" class="btn btn-warning"><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+              <!--<button type="button" class="btn btn-success"><%= link_to 'Show', task %></button>-->
+              <!--<button type="button" class="btn btn-info"><%= link_to 'Edit', edit_task_path(task) %></button>-->
+              
             </td>
           </tr>
         <% end %>
