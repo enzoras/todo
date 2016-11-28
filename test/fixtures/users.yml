@@ -1,11 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  string: MyString
-  email: MyString
+# REMOVED THESE IN SECTION 6.31 OF RAILS TUTORIAL
+# one:
+#   name: MyString
+#   string: MyString
+#   email: MyString
 
-two:
-  name: MyString
-  string: MyString
-  email: MyString
+# two:
+#   name: MyString
+#   string: MyString
+#   email: MyString
