@@ -14,9 +14,8 @@
       <thead>
         <tr>
           <th class='col-md-3 col-md-offset-2'>Title</th>
-          <!--<th class='col-md-3'>Notes</th>-->
-          <th class='col-md-1>User</th>
-          <th class='col-md-2>Category</th>
+          <th class='col-md-1'>User</th>
+          <th class='col-md-2'>Category</th>
         </tr>
       </thead>
     
@@ -27,7 +26,6 @@
               <a class="task-link"><%= link_to task.title, edit_task_path(task) %></a>
               <%= button_to checkmark, task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></button>
             </td>
-            <!--<td><%= task.notes %></td>-->
             <td><%= task.user %></td>
             <td><%= task.category %></td>
             <td>
@@ -40,7 +38,7 @@
       </tbody>
     </table>
   </div>
-  <h2> Next step - add in devise and set up users.  Then think about overall database.</h2>
+  <h2>Work on Sub-Task form</h2>
   </body>
 <br>
 

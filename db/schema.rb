@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20161123200354) do
     t.string   "title"
     t.text     "notes"
     t.string   "user"
-    t.integer  "category"
+    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
