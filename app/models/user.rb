@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
     validates :lname, presence: true, length: {maximum: 50}
     validates :name, presence: true, length: {maximum: 50}
+    validates :password, length: { minimum: 6 }
 end

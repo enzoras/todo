@@ -11,22 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">
+      <h2>Sign up</h2>
 
-  <div class="field">
-    <%= f.label :lname %>
-    <%= f.text_field :lname %>
-  </div>
+      <div class="field form-group">
+        <%= f.label "First Name" %><br />
+        <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= f.label "Last Name" %><br />
+        <%= f.text_field :lname, autofocus: true, class: 'form-control' %>
+      </div>
+    
+    
+      <div class="field form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+      </div>
+    
+      <div class="field form-group">
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+      <div class="actions form-group">
+        <%= f.submit "Sign up", class: 'btn btn-success' %>
+      </div>
+    </div>
   </div>
 <% end %>
