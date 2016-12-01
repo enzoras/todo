@@ -29,19 +29,14 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, class: 'navbar-brand' do %>
-        <i class="fa fa-users"></i>
+        <i class="glyphicon glyphicon-ok-circle"></i>
         GetterDone
       <% end %>
     </div>
-    <div class="collapse navbar-collapse" id="main-nav-collapse">
-      <div class="nav navbar-nav navbar-right">
-        <!--< % if current_user  %>-->
-          <a href = <%= new_user_path %> role="button" class="btn btn-primary navbar col-md-offset-1">Sign Up</a>
-        <!--< % else %>-->
-
-        <!--< % end %>-->
-      </div>
-      <ul class="nav navbar-nav navbar-right">
+    <!--<div class="collapse navbar-collapse" id="main-nav-collapse">-->
+    <div class="" id="main-nav-collapse">
+      <ul class="nav navbar-nav navbar-right todo-navigation">
+        <li><%= link_to "Sign Up!", new_user_path, class: 'btn btn-success', id: "todo-navigation", method: :get %></li>
         <li><%= link_to "About", new_task_path %></li>
         <li><%= link_to "Contact Us", new_task_path %></li>
       </ul>
